@@ -472,6 +472,9 @@ button {
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.39, 1.03, 0.82, 0.08);
 }
+.offers > .single-offer {
+    overflow: hidden;
+}
 
 .single-offer:hover .techno-back {
     visibility: visible;
@@ -479,6 +482,7 @@ button {
 
     transform: translateY(0);
 }
+
 .techno-desc {
     width: 322px;
     height: 140px;
