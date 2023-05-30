@@ -19,7 +19,9 @@
                     <nav>
                         <ul class="nav-menu">
                             <li>
-                                <a class="menu" href="./index.html">Studio</a>
+                                <a class="menu is-active" href="./index.html"
+                                    >Studio</a
+                                >
                             </li>
                             <li>
                                 <a class="menu" href="./portfolio.html"
@@ -140,23 +142,33 @@
                     <h2>What we do</h2>
                     <!--potential links to be added to the pictures next. I removed width and height parameters below as they are defined in css-->
                     <ul class="main-images">
-                        <li>
+                        <li class="main-image">
                             <img
                                 src="images/box1.jpg"
-                                alt="person clicking on the keyboard"
+                                alt="person
+                            clicking on the keyboard"
                             />
+                            <div class="main-image-back">
+                                <p class="main-image-desc">DESKTOP APPS</p>
+                            </div>
                         </li>
-                        <li>
+                        <li class="main-image">
                             <img
                                 src="images/box2.jpg"
                                 alt="person using telephone"
                             />
+                            <div class="main-image-back">
+                                <p class="main-image-desc">MOBILE APPS</p>
+                            </div>
                         </li>
-                        <li>
+                        <li class="main-image">
                             <img
                                 src="images/box3.jpg"
                                 alt="person using tablet"
                             />
+                            <div class="main-image-back">
+                                <p class="main-image-desc">DESIGN SOLUTIONS</p>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -527,5 +539,10 @@
                 </div>
             </div>
         </footer>
+        <button data-modal-open>OPEN</button>
+        <div class="modal is-hidden" data-modal>
+            <button data-modal-close>X</button>
+        </div>
+        <script src=".js/modal.js"></script>
     </body>
 </html>
