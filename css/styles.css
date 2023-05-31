@@ -18,7 +18,8 @@ body {
 .contact-svg {
     fill: currentColor;
 
-    align-content: center;
+    align-content: baseline;
+    padding-right: 10px;
 }
 
 .container {
@@ -34,7 +35,9 @@ header {
     border-bottom: solid;
 
     border-color: #ececec;
+    margin: 0 auto;
 }
+
 .menu-block {
     display: flex;
     flex-wrap: nowrap;
@@ -47,17 +50,32 @@ header {
 
 .nav-menu {
     display: flex;
-    width: 281px;
+    width: 285px;
     justify-content: space-between;
-    margin-right: 340px;
+    margin-right: 314px;
 }
 
-.is-active::after {
-    text-decoration-line: underline;
-    width: 48px;
-    height: 4px;
+.menu {
+    color: #212121;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.17;
+}
+.is-active {
+    text-decoration: none;
+    position: relative;
     color: #2196f3;
+}
+.is-active::after {
+    position: absolute;
+    content: "";
+    height: 4px;
+
     border-radius: 2px;
+    left: 0;
+    right: 0;
+    top: 30px;
+    background: #2196f3;
 }
 
 .contact-up {
@@ -66,6 +84,7 @@ header {
     gap: 30px;
     font-weight: 500;
     text-align: center;
+    line-height: 1.17;
 }
 
 button:hover,
@@ -122,10 +141,23 @@ li {
 }
 
 .contact {
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    width: 161px;
+
+    color: #757575;
+
+    font-weight: 500;
+    font-size: 14px;
+
+    letter-spacing: 0.02em;
+}
+.contactbbbb {
     margin: 0 auto;
     color: #757575;
     font-size: 14px;
-    line-height: 1.14;
+    line-height: 1.17;
     width: 161px;
     align-items: center;
 }
@@ -446,13 +478,6 @@ button {
     position: relative;
 }
 
-.lower-offer-part {
-    border-style: solid;
-    border-color: #eeeeee;
-    border-top: 0;
-    height: 110px;
-}
-
 .single-offer:hover {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     transition-duration: 250ms;
@@ -484,6 +509,7 @@ button {
 
 .single-offer:hover .techno-back {
     visibility: visible;
+
     opacity: 1;
 
     transform: translateY(0);
@@ -496,6 +522,16 @@ button {
     color: #fff;
 }
 
+.lower-offer-part {
+    border-style: solid;
+    border-color: #eeeeee;
+    border-top: 0;
+    height: 110px;
+}
+
+.lower-offer-part:hover {
+    overflow: hidden;
+}
 .example-offer-name {
     display: flex;
 
@@ -516,11 +552,4 @@ button {
     margin: 0;
 
     padding-left: 24px;
-}
-
-.menu {
-    color: #212121;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
 }
