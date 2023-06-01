@@ -489,6 +489,7 @@ button {
     flex-basis: calc((100% - 60) / 3);
     margin-bottom: 30px;
     position: relative;
+    overflow: hidden;
 }
 
 .single-offer:hover {
@@ -542,7 +543,10 @@ button {
     height: 110px;
 }
 
-.lower-offer-part:hover {
+.single-offer-flow {
+    position: relative;
+    margin: 0;
+    padding: 0;
     overflow: hidden;
 }
 .example-offer-name {
