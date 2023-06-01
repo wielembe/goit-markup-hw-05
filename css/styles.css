@@ -229,13 +229,73 @@ h4 {
 }
 
 .big-button:hover,
-.big-button:focus {
-    color: #2196f3;
-    background-color: #fff;
-    font-weight: 700;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.39, 1.03, 0.82, 0.08);
+.big:focus {
+    cursor: pointer;
 }
+
+.backdrop {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    cursor: not-allowed;
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.is-hidden {
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
+}
+
+.modal {
+    position: relative;
+    margin: auto;
+    background: #ffffff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    width: 528px;
+    height: 581px;
+    cursor: auto;
+    border-radius: 4px;
+}
+
+.modal-close {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 11px;
+    padding-top: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: #fff;
+    position: relative;
+    top: 8px;
+
+    left: 93%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+
+    transition-duration: none;
+    transition: none;
+}
+
 .banner {
     background-image: url(/goit-markup-hw-04/images/back.jpg);
     background-image: linear-gradient(to right, #2f303a 40%);
